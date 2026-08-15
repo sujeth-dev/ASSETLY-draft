@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assetly — Draft previews</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Cormorant+Infant:ital,wght@0,300;0,400&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F4EC;
+  --field:#E7E2CE;
+  --ink:#26261B;
+  --olive:#40402D;
+  --moss:#5C5C46;
+  --line:rgba(38,38,27,.15);
+  --bottle:#25453A;
+  --d:"Bodoni Moda",serif; --s:"Cormorant Infant",serif; --u:"Inter Tight",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--u);-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:clamp(48px,8vw,96px) clamp(20px,5vw,40px)}
+header{margin-bottom:56px}
+header .eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(38,38,27,.45)}
+h1{font-family:var(--d);font-weight:400;font-size:clamp(28px,4vw,40px);margin-top:14px}
+h1 i{font-style:italic;color:var(--moss)}
+p.sub{font-family:var(--s);font-size:18px;color:rgba(38,38,27,.6);max-width:46ch;margin-top:16px}
+.list{margin-top:48px;border-top:1px solid var(--line)}
+.row{display:flex;align-items:baseline;justify-content:space-between;gap:20px;
+  padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.row .n{font-family:var(--d);font-size:12px;color:var(--bottle);width:28px;flex-shrink:0}
+.row .t{flex:1}
+.row h3{font-family:var(--d);font-weight:400;font-size:20px}
+.row p{font-family:var(--s);font-size:15px;color:rgba(38,38,27,.55);margin-top:4px}
+.row .go{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,38,27,.4);
+  white-space:nowrap;transition:color .2s}
+.row:hover .go{color:var(--bottle)}
+.row:hover h3{color:var(--bottle)}
+footer{margin-top:56px;font-size:12px;color:rgba(38,38,27,.4)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Assetly · internal review</div>
+    <h1>Draft <i>previews</i></h1>
+    <p class="sub">Working versions for review. Nothing here is final — click through to view any draft in full.</p>
+  </header>
+
+  <div class="list">
+    <a class="row" href="index.html">
+      <span class="n">00</span>
+      <span class="t"><h3>Home</h3><p>Operating lease structuring — main draft</p></span>
+      <span class="go">View →</span>
+    </a>
+    <a class="row" href="1-residual.html">
+      <span class="n">01</span>
+      <span class="t"><h3>Residual</h3><p>Residual value framing</p></span>
+      <span class="go">View →</span>
+    </a>
+    <a class="row" href="2-duty-cycle.html">
+      <span class="n">02</span>
+      <span class="t"><h3>Duty Cycle</h3><p>Duty-cycle-led structuring</p></span>
+      <span class="go">View →</span>
+    </a>
+    <a class="row" href="3-white-paper.html">
+      <span class="n">03</span>
+      <span class="t"><h3>White Paper</h3><p>Long-form / white paper layout</p></span>
+      <span class="go">View →</span>
+    </a>
+    <a class="row" href="4-position.html">
+      <span class="n">04</span>
+      <span class="t"><h3>Position</h3><p>Positioning-led draft</p></span>
+      <span class="go">View →</span>
+    </a>
+  </div>
+
+  <footer>Updated for internal review — not for external distribution.</footer>
+</div>
+</body>
+</html>
