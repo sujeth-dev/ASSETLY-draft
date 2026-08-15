@@ -207,4 +207,29 @@ function move(){
 addEventListener('scroll',move,{passive:true});addEventListener('resize',move);move();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}}),{threshold:.2});
 document.querySelectorAll('.rv').forEach(s=>io.observe(s));
-</script></body></html>
+</script>
+<div id="assetly-draftnav" style="position:fixed;right:16px;bottom:16px;z-index:99999;font-family:'Inter Tight',system-ui,sans-serif;text-align:left">
+  <button id="adn-toggle" style="cursor:pointer;border:none;border-radius:999px;padding:10px 18px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:#25453A;color:#F6F4EC;box-shadow:0 6px 20px rgba(0,0,0,.22)">Drafts</button>
+  <div id="adn-panel" style="display:none;flex-direction:column;gap:2px;position:absolute;right:0;bottom:calc(100% + 8px);min-width:190px;background:#F6F4EC;border:1px solid rgba(38,38,27,.15);border-radius:10px;padding:8px;box-shadow:0 12px 32px rgba(0,0,0,.22)">
+    <a href="index.html" style="display:block;padding:8px 10px;border-radius:6px;font-size:13px;color:#26261B;text-decoration:none">Home</a>
+    <a href="1-residual.html" style="display:block;padding:8px 10px;border-radius:6px;font-size:13px;color:#26261B;text-decoration:none">01 · Residual</a>
+    <a href="2-duty-cycle.html" style="display:block;padding:8px 10px;border-radius:6px;font-size:13px;color:#26261B;text-decoration:none">02 · Duty Cycle</a>
+    <a href="3-white-paper.html" style="display:block;padding:8px 10px;border-radius:6px;font-size:13px;color:#26261B;text-decoration:none">03 · White Paper</a>
+    <a href="4-position.html" style="display:block;padding:8px 10px;border-radius:6px;font-size:13px;color:#26261B;text-decoration:none">04 · Position</a>
+    <a href="previews.html" style="display:block;padding:8px 10px;border-radius:6px;font-size:13px;color:#25453A;text-decoration:none;border-top:1px solid rgba(38,38,27,.15);margin-top:4px;padding-top:10px">All previews ↗</a>
+  </div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('adn-toggle'), panel=document.getElementById('adn-panel');
+  btn.onclick=function(e){e.stopPropagation();panel.style.display=panel.style.display==='flex'?'none':'flex'};
+  document.addEventListener('click',function(e){if(!document.getElementById('assetly-draftnav').contains(e.target))panel.style.display='none'});
+  var path=(location.pathname.split('/').pop())||'index.html';
+  panel.querySelectorAll('a').forEach(function(a){
+    var href=a.getAttribute('href');
+    if(href===path){a.style.background='rgba(37,69,58,.1)';a.style.fontWeight='600';a.style.pointerEvents='none'}
+    else{a.onmouseenter=function(){a.style.background='rgba(38,38,27,.06)'};a.onmouseleave=function(){a.style.background='transparent'}}
+  });
+})();
+</script>
+</body></html>
