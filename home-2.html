@@ -98,9 +98,9 @@ h1 .m:nth-of-type(2)>span{animation-delay:.92s}
 @media(max-width:700px){.hero .plate{opacity:.13;width:210%}}
 
 /* ─── hero font toggle ─── */
-h1.font-essential{font-family:"Essential Sans","Inter Tight",system-ui,sans-serif;letter-spacing:-.01em}
-h1.font-nord{font-family:"Nord","Bodoni Moda",serif;letter-spacing:-.01em}
-h1.font-dm{font-family:"DM Serif Display",serif;letter-spacing:-.014em}
+body.font-essential h1,body.font-essential h2,body.font-essential h3,body.font-essential .card h3{font-family:"Essential Sans","Inter Tight",system-ui,sans-serif;letter-spacing:-.01em}
+body.font-nord h1,body.font-nord h2,body.font-nord h3,body.font-nord .card h3{font-family:"Nord","Bodoni Moda",serif;letter-spacing:-.01em}
+body.font-dm h1,body.font-dm h2,body.font-dm h3,body.font-dm .card h3{font-family:"DM Serif Display",serif;letter-spacing:-.014em}
 .font-toggle{display:flex;gap:0;margin-top:clamp(14px,2.2vh,22px);
   border:1px solid var(--line);border-radius:4px;overflow:hidden;
   position:relative;z-index:2}
@@ -260,7 +260,7 @@ footer .brand-name{font-family:var(--d);color:var(--khaki);opacity:.6}
   .arg .body{opacity:1!important;transform:none!important;filter:none!important}
   .trust .track{animation:none!important;flex-wrap:wrap;width:auto;justify-content:center;gap:clamp(24px,4vw,48px)}
 }
-</style></head><body>
+</style></head><body class="font-essential">
 
 <nav id="nav"><div class="in">
   <div class="brand"><i></i><b>ASSETLY</b></div>
@@ -287,7 +287,7 @@ footer .brand-name{font-family:var(--d);color:var(--khaki);opacity:.6}
     <path d="M40 276v-46h34v46M40 252h34"/>
   </svg>
   <div class="mark"></div>
-  <h1 class="font-essential"><span class="m"><span>The lighter</span></span><span class="m"><span><i>balance sheet.</i></span></span></h1>
+  <h1><span class="m"><span>The lighter</span></span><span class="m"><span><i>balance sheet.</i></span></span></h1>
   <div class="font-toggle fi" role="group" aria-label="Headline typeface">
     <button aria-pressed="true" data-font="essential">Essential Sans</button>
     <button aria-pressed="false" data-font="nord">Nord</button>
@@ -440,11 +440,10 @@ const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>80),{passive:true});
 
 /* font toggle */
-const h1El=document.querySelector('h1');
 document.querySelectorAll('.font-toggle button').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.font-toggle button').forEach(b=>b.setAttribute('aria-pressed','false'));
   btn.setAttribute('aria-pressed','true');
-  h1El.className='font-'+btn.dataset.font;
+  document.body.className='font-'+btn.dataset.font;
 }));
 
 /* section reveals + plate tracing */
