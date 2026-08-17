@@ -27,7 +27,12 @@ body{background:var(--paper);color:var(--ink);font-family:var(--u);
 nav{position:fixed;top:0;left:0;right:0;z-index:60;height:66px;display:flex;align-items:center;
   justify-content:center;border-bottom:1px solid transparent;
   transition:background .7s var(--e),border-color .7s var(--e)}
-nav.solid{background:rgba(246,244,236,.94);border-bottom-color:rgba(37,69,58,.18)}
+nav.solid{background:rgba(18,18,12,.92);border-bottom-color:rgba(182,174,133,.14)}
+nav.solid .brand i{background:var(--khaki)}
+nav.solid .brand b{color:var(--khaki)}
+nav.solid .navlinks a{color:rgba(182,174,133,.7)}
+nav.solid .navlinks a:hover{color:var(--khaki)}
+nav.solid .navlinks a::after{background:var(--khaki)}
 nav .in{width:100%;max-width:1180px;padding:0 clamp(20px,5vw,60px);
   display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:9px}
@@ -76,7 +81,7 @@ nav.solid .navlinks{opacity:1;transform:none}
   opacity:0;transform:translateY(20px) scale(.95);
   animation:settle 1.7s var(--e) forwards .15s}
 @keyframes settle{to{opacity:1;transform:none}}
-h1{font-family:var(--d);font-weight:400;font-size:clamp(31px,6.4vw,76px);line-height:1.02;
+h1{font-family:var(--d);font-weight:400;font-size:clamp(36px,7.6vw,92px);line-height:1.0;
   letter-spacing:-.018em;margin-top:clamp(30px,5.5vh,58px);max-width:15ch;position:relative;z-index:2}
 h1 i{font-style:italic;color:var(--moss)}
 h1 .m:nth-of-type(1)>span{animation-delay:.8s}
@@ -240,7 +245,7 @@ input[type=range]:focus-visible{outline:2px solid var(--bottle);outline-offset:6
 .cta:hover{background:var(--bottle);color:var(--paper);border-color:var(--bottle)}
 /* ─── footer (dark, Duty Cycle influence) ─── */
 .footer-divider{height:1px;background:var(--bottle);opacity:.3}
-footer{background:var(--pitch);padding:clamp(40px,7vh,72px) clamp(20px,5vw,60px) clamp(36px,6vh,56px);
+footer{background:#182420;padding:clamp(40px,7vh,72px) clamp(20px,5vw,60px) clamp(36px,6vh,56px);
   display:flex;justify-content:center;gap:clamp(14px,3vw,40px);flex-wrap:wrap;
   font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(182,174,133,.36)}
 footer .brand-name{font-family:var(--d);color:var(--khaki);opacity:.6}
