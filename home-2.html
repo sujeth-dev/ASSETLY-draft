@@ -13,7 +13,7 @@
   --moss:#5C5C46;
   --line:rgba(38,38,27,.15);
   --bottle:#25453A;     /* single accent, under 4% of surface */
-  --pitch:#12120C;--khaki:#B6AE85;--soot:#1D1D14;
+  --pitch:#21241A;--khaki:#B1AD77;--ivory:#E7E3D4;--soot:#1D1D14;
   --d:"DM Serif Display",serif; --s:"DM Serif Text",serif; --u:"Inter Tight",system-ui,sans-serif;
   --e:cubic-bezier(.22,1,.36,1); --eio:cubic-bezier(.65,0,.35,1);
 }
@@ -27,10 +27,10 @@ body{background:var(--paper);color:var(--ink);font-family:var(--u);
 nav{position:fixed;top:0;left:0;right:0;z-index:60;height:66px;display:flex;align-items:center;
   justify-content:center;border-bottom:1px solid transparent;
   transition:background .7s var(--e),border-color .7s var(--e)}
-nav.solid{background:rgba(18,18,12,.92);border-bottom-color:rgba(182,174,133,.14)}
-nav.solid .brand i{background:var(--khaki)}
-nav.solid .brand b{color:var(--khaki)}
-nav.solid .navlinks a{color:rgba(182,174,133,.7)}
+nav.solid{background:rgba(33,36,26,.92);border-bottom-color:rgba(177,173,119,.14)}
+nav.solid .brand i{background:var(--ivory)}
+nav.solid .brand b{color:var(--ivory)}
+nav.solid .navlinks a{color:rgba(177,173,119,.7)}
 nav.solid .navlinks a:hover{color:var(--khaki)}
 nav.solid .navlinks a::after{background:var(--khaki)}
 nav .in{width:100%;max-width:1180px;padding:0 clamp(20px,5vw,60px);
@@ -261,10 +261,10 @@ body.calc-enabled .calc-panel{opacity:1;pointer-events:auto;transition:opacity .
 .cta:hover{background:var(--bottle);color:var(--paper);border-color:var(--bottle)}
 /* ─── footer (dark, Duty Cycle influence) ─── */
 .footer-divider{height:1px;background:var(--bottle);opacity:.3}
-footer{background:#182420;padding:clamp(40px,7vh,72px) clamp(20px,5vw,60px) clamp(36px,6vh,56px);
+footer{background:var(--pitch);padding:clamp(40px,7vh,72px) clamp(20px,5vw,60px) clamp(36px,6vh,56px);
   display:flex;justify-content:center;gap:clamp(14px,3vw,40px);flex-wrap:wrap;
-  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(182,174,133,.36)}
-footer .brand-name{font-family:var(--d);color:var(--khaki);opacity:.6}
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(177,173,119,.36)}
+footer .brand-name{font-family:var(--d);color:var(--ivory);opacity:.8}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
